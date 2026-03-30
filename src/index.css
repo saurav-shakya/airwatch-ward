@@ -7,10 +7,46 @@ html, body, #root {
   margin: 0;
   padding: 0;
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #f8fafc;
+  background-color: #0f172a;
 }
 
 .leaflet-container {
   height: 100%;
   width: 100%;
+  cursor: crosshair;
 }
+
+/* ---- AirWatch Custom Tooltip ---- */
+.airwatch-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45) !important;
+  padding: 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.airwatch-tooltip::before {
+  display: none !important;
+}
+
+/* ---- Interactive ward polygons ---- */
+.leaflet-interactive {
+  cursor: pointer !important;
+  transition: fill-opacity 0.15s ease;
+}
+
+/* ---- Custom scrollbar for sidebar ---- */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
